@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginBottom="100dp"
+            android:fontFamily="@font/amita"
+            android:gravity="center_horizontal"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/bt_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bt_start"
+            style="@style/Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/bt_margin"
+            android:onClick="onClickStart"
+            android:text="@string/start"
+            app:layout_constraintBottom_toTopOf="@+id/bt_stop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+        <Button
+            android:id="@+id/bt_stop"
+            style="@style/Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/bt_margin"
+            android:onClick="onClickStop"
+            android:text="@string/stop"
+            app:layout_constraintBottom_toTopOf="@+id/bt_rest"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_start" />
+
+        <Button
+            android:id="@+id/bt_rest"
+            style="@style/Button_Style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="232dp"
+            android:onClick="onClickReset"
+            android:text="@string/reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_stop" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
